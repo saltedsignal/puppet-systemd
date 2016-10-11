@@ -19,7 +19,9 @@ describe 'systemd' do
       :refreshonly => true,
       :path        => '/usr/bin',
     )}
-    it { is_expected.to_not contain_service('systemd-journald') }
+    it { is_expected.to contain_service('systemd-journald').with(
+      :ensure => 'running',
+    ) }
     it { is_expected.to have_ini_setting_resource_count(0) }
   end
   context 'with journald options' do

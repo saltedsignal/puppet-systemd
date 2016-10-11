@@ -7,9 +7,19 @@
 
 This module declares exec resources to create global sync points for reloading systemd.
 
+It also allows you to manage journald settings.
+
 ## Usage and examples
 
-There are two ways to use this module.
+You can manage journald settings through setting the `journald_settings` parameter:
+
+```yaml
+systemd::journald_settings:
+  Storage: auto
+  MaxRetentionSec: 5day
+```
+
+Furthermore this module provides two ways to manage further systemd resources:
 
 ### unit files
 
