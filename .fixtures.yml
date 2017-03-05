@@ -2,3 +2,6 @@
 fixtures:
   symlinks:
     systemd: "#{source_dir}"
+  forge_modules:
+    inifile: "puppetlabs/inifile"
+    stdlib: "puppetlabs/stdlib"
